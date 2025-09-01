@@ -151,7 +151,7 @@ function createParticles() {
     const particlesContainer = document.getElementById('particles-background');
     const particleCount = window.innerWidth < 768 ? 30 : 60;
 
-    // Очистка существующих частиц
+
     particlesContainer.innerHTML = '';
 
     for (let i = 0; i < particleCount; i++) {
@@ -159,8 +159,8 @@ function createParticles() {
         particle.className = 'particle';
 
         const size = Math.random() * 3 + 1;
-        const posX = Math.random() * 100; // % от ширины контейнера
-        const posY = Math.random() * 100; // % от высоты контейнера
+        const posX = Math.random() * 100; 
+        const posY = Math.random() * 100; 
         const opacity = Math.random() * 0.5 + 0.1;
 
         particle.style.cssText = `
@@ -178,9 +178,6 @@ function createParticles() {
 
         particlesContainer.appendChild(particle);
     }
-
-    // Удалите все обработчики событий для движения частиц
-    // (уберите код с mousemove и resize из оригинальной функции)
 }
     const style = document.createElement('style');
     style.textContent = `
